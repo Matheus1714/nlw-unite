@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    container_name: back
+    build:
+      context: .
+    command: npm run dev
+    ports:
+      - "2222:2222"
+    environment:
+      - PORT=2222
+    volumes:
+      - .:/usr/app
+      - node_module_back:/usr/app/node_modules
+  
+volumes:
+  node_module_back: {}
