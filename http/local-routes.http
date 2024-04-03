@@ -1,0 +1,37 @@
+@base_url=http://localhost:3333
+
+###
+
+# @name create-event
+POST {{base_url}}/events
+Content-Type: application/json
+
+{
+    "title": "Unite122",
+    "details": "Um evento para quem é apaixonado por programação",
+    "maximumAttendees": 1
+}
+
+###
+
+# @name register-for-event
+POST {{base_url}}/events/82c0eaf8-51dd-459a-98b2-2dcf151e6b85/attendees
+Content-Type: application/json
+
+{
+    "name": "Matheus asdasdMota23",
+    "email": "matheus.masdasdot323a@gmail.com"
+}
+
+###
+
+# @name get-event
+GET {{base_url}}/events/82c0eaf8-51dd-459a-98b2-2dcf151e6b85
+
+###
+
+# @name get-attendee-badge
+GET {{base_url}}/attendees/1/badge
+
+
+
